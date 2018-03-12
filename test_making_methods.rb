@@ -43,5 +43,27 @@ class Making_methods_test < Minitest::Test
 		assert_equal("AbCQdef", insert("AbCdef", 3, "Q"))
 	end	
 
+	def test_array_delete_returns_array
+		assert_equal(Array, delete(["a", "b", "c", "d", "b", "e", "b"], "b").class)
+	end		
 
+	def test_array_delete_returns_array_without_b
+		assert_equal(["a", "c", "d", "e"], delete(["a", "b", "c", "d", "b", "e", "b"], "b"))
+	end	
+
+	def test_array_delete_returns_array_without_3
+		assert_equal([1,2,4,5,6,7,9], delete([1,2,3,4,3,5,6,7,3,9], 3))
+	end	
+
+	def test_join_returns_string
+		assert_equal(String, join(["a", "b", "c"]).class)
+	end	
+
+	def test_join_returns_string_joined
+		assert_equal("abc", join(["a", "b", "c"]))
+	end		
+
+	def test_join_returns_numbers_joined
+		assert_equal("123", join([1,2,3]))
+	end		
 end

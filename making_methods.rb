@@ -8,11 +8,6 @@ def reverse_string(stuff)
 end
 
 
-reversed = reverse_string("cheese")
-puts reversed
-
-
-
 def upcase(stuff)
 
 	new_string = ""
@@ -42,6 +37,31 @@ def insert(stuff, index, other)
 		x+=1
 	end
 	return new_string
-
 end
+
+def delete(array, obj)
+	new_array = []
+
+	array.each do |x|
+
+		if x == obj
+		else
+			new_array.push(x)
+		end
+	end
+	return new_array
+end
+
+def join(array)
+
+	new_string = ""
+	x = 0
+	array.each do |obj|
+		new_string[x] = obj.to_s
+		x+=1
+	end
+	return new_string
+end
+
+
 
