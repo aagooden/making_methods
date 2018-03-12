@@ -64,4 +64,14 @@ def join(array)
 end
 
 
+def pop(array)
+
+	new_string = ""
+	if array == []
+		return nil
+	end
+	new_string = array.last.to_s
+	return new_string
+end
+
 

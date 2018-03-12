@@ -66,4 +66,23 @@ class Making_methods_test < Minitest::Test
 	def test_join_returns_numbers_joined
 		assert_equal("123", join([1,2,3]))
 	end		
+
+	def test_pop_returns_string
+		assert_equal(String, pop(["a", "b", "c"]).class)
+	end	
+
+	def test_pop_returns_nil_if_array_empty
+		assert_equal(nil, pop([]))
+	end	
+
+	def test_pop_returns_c
+		assert_equal("c", pop(["a", "b", "c"]))
+	end	
+
+	def test_pop_returns_3
+		assert_equal("3", pop([1,2,3]))
+	end	
+
+
+
 end
