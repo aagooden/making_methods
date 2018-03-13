@@ -60,6 +60,10 @@ class Making_methods_test < Minitest::Test
 	end	
 
 	def test_join_returns_string_joined
+		assert_equal("Iamcoolest", join(["I", "am", "coolest"]))
+	end		
+
+	def test_join_returns_string_words_joined
 		assert_equal("abc", join(["a", "b", "c"]))
 	end		
 

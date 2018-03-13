@@ -55,10 +55,8 @@ end
 def join(array)
 
 	new_string = ""
-	x = 0
 	array.each do |obj|
-		new_string[x] = obj.to_s
-		x+=1
+		new_string = new_string + obj.to_s
 	end
 	return new_string
 end
