@@ -13,7 +13,11 @@ def upcase(stuff)
 	new_string = ""
 	x = 0
 	stuff.each_char do |i|
-		new_string[x] = i.capitalize
+		if i.ord >=97 && i.ord <=122 
+			i = i.ord - 32
+			i = i.chr
+		end
+		new_string[x] = i
 		x+=1
 	end
 	return new_string
